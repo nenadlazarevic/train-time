@@ -41,7 +41,7 @@ database.ref().push(newTrain);
 
 
   });
-$(document).ready(function () {
+
 
   database.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
@@ -87,7 +87,7 @@ function update() {
   });
 
    
-
+$(document).ready(function () {
         setInterval(function () {
             $("#train-table").load("index.html #train-table");
         }, 3000);
