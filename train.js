@@ -8,7 +8,7 @@
     messagingSenderId: "497219245197"
   };
   firebase.initializeApp(config);
-$(document).ready(function () {
+
   var database = firebase.database();
 
 
@@ -41,7 +41,7 @@ database.ref().push(newTrain);
 
 
   });
-
+$(document).ready(function () {
 
   database.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
