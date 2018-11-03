@@ -1,4 +1,4 @@
-
+$(document).ready(function () {
  var config = {
     apiKey: "AIzaSyC2HlSxsvLFU81AR_zmcClhKDFg21UxEqs",
     authDomain: "train-schedule-c6385.firebaseapp.com",
@@ -87,7 +87,7 @@ function update() {
   });
 
    
- $(document).ready(function () {
+
         setInterval(function () {
             $("#train-table").load("database #train-table");
         }, 3000);
