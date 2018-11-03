@@ -1,4 +1,4 @@
- // Initialize Firebase
+
  var config = {
     apiKey: "AIzaSyC2HlSxsvLFU81AR_zmcClhKDFg21UxEqs",
     authDomain: "train-schedule-c6385.firebaseapp.com",
@@ -15,9 +15,6 @@
   $("#add-train-btn").on("click", function(event) {
     event.preventDefault();
 
-    // YOUR TASK!!!
-    // Code in the logic for storing and retrieving the most recent user.
-    // Don't forget to provide initial data to your Firebase database.
     var trainName = $("#train-name-input").val().trim();
     var destination = $("#destination-input").val().trim();
     var startTime = $("#start-input").val().trim();
@@ -85,8 +82,14 @@ function update() {
         $("<td>").text(tMinutesTillTrain)
     )
     $("#train-table > tbody").append(newRow);
+
+    
   });
 
-
-
+   
+ $(document).ready(function () {
+        setInterval(function () {
+            $("#train-table").load("index.html #train-table");
+        }, 3000);
+    });
 
