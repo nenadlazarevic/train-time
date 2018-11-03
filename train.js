@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
  var config = {
     apiKey: "AIzaSyC2HlSxsvLFU81AR_zmcClhKDFg21UxEqs",
     authDomain: "train-schedule-c6385.firebaseapp.com",
@@ -8,7 +8,7 @@ $(document).ready(function () {
     messagingSenderId: "497219245197"
   };
   firebase.initializeApp(config);
-
+$(document).ready(function () {
   var database = firebase.database();
 
 
