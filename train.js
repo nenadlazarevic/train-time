@@ -89,7 +89,7 @@ function update() {
    
  $(document).ready(function () {
         setInterval(function () {
-            $("#train-table").load("index.html #train-table");
+            $("#train-table").load("database #train-table");
         }, 3000);
     });
 
